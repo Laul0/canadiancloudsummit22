@@ -8,7 +8,8 @@
     "clean": "gulp clean",
     "test": "gulp test",
     "test:jest": "jest",
-    "testcafe:edge": "testcafe edge"
+    "testcafe:edge": "testcafe edge:headless",
+    "testcafe:chrome": "testcafe chrome:headless"
   },
   "dependencies": {
     "react": "16.13.1",
