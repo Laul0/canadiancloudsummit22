@@ -18,7 +18,8 @@
     "coverageReporters": [
       "json",
       "lcov",
-      "text-summary"
+      "text-summary",
+      "cobertura"
     ],
     "coverageDirectory": "<rootDir>/jest",
     "moduleNameMapper": {

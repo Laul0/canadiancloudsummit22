@@ -27,9 +27,10 @@ jobs:
     
     - name: Launch e2e_chrome Tests
       run: |
-        export SP_BASEURL=${{ secrets.SP_BASEURL }}
-        export SP_USERNAME=${{ secrets.SP_USERNAME }}
-        export SP_PASSWORD=${{ secrets.SP_PASSWORD }}
+        touch .env
+        echo 'SP_BASEURL='${{ secrets.SP_BASEURL }} >> .env
+        echo 'SP_USERNAME='${{ secrets.SP_USERNAME }} >> .env
+        echo 'SP_PASSWORD='${{ secrets.SP_PASSWORD }} >> .env
         npm run testcafe:chrome
     
     - name: Publish Unit Test Results
