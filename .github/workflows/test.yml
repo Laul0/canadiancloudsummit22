@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v2
@@ -17,6 +17,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14.x
+        environment: 'dev'
 
     - name: Launch Jest Tests
       run: |
@@ -25,7 +26,6 @@ jobs:
         npm run test:jest
     
     - name: Launch e2e_chrome Tests
-      environment: 'dev'
       run: |
         export SP_BASEURL=${{ secrets.SP_BASEURL }}
         export SP_USERNAME=${{ secrets.SP_USERNAME }}
