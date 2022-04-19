@@ -38,3 +38,10 @@ jobs:
       if: always()
       with:
         files: "**/*junit.xml"
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: testcafe-files
+        path: |
+          testcafe_screenshots/*
+          testcafe_videos/*

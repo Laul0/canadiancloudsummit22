@@ -36,7 +36,7 @@ export default class Config {
     }
 
     /**
-     * Get environment varialble
+     * Get environment variable
      * @param s Name of the variable
      * @returns Value of the variable
      * @throws If name of variable not found
