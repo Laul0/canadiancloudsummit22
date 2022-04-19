@@ -40,6 +40,7 @@ jobs:
         files: "**/*junit.xml"
 
     - uses: actions/upload-artifact@v3
+      if: failure()
       with:
         name: testcafe-files
         path: |
